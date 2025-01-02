@@ -35,6 +35,22 @@
         color:  #046307;
         font-size: 100%;
         }
+        @media (max-width: 768px) {
+            .weightRange::-webkit-slider-thumb, .valueRange::-webkit-slider-thumb {
+            width: 80px; /* Larger thumb on mobile */
+            height: 80px;
+            }
+
+            .weightRange::-moz-range-thumb, .valueRange::-moz-range-thumb {
+            width: 80px; /* Larger thumb on mobile */
+            height: 80px;
+            }
+
+            .weightRange::-ms-thumb, .valueRange::-ms-thumb  {
+            width: 80px; /* Larger thumb on mobile */
+            height: 80px;
+            }
+        }
     </style>
     <meta property="og:url" content="https://mattmack.net">
     <meta property="og:type" content="website">
@@ -55,55 +71,72 @@
         <div>
             <label for="text1">Input 1:</label>
             <input type="text" id="text1" oninput="updateOutput()">
+            <br>
             <label for="input1">Value 1 (-10 to 10):</label>
-            <input type="range" id="input1" min="-10" max="10" value="0" oninput="updateOutput()">
+            <input type="range" id="input1" min="-10" max="10" value="0" class="valueRange" oninput="updateOutput()">
             <span id ="range1Value">0</span>
+            <br>
+            <label for="weight1">Weight 1:</label>
             <input type="range" id="weight1" class="weightRange" min="0" max="100" value="20" oninput="updateOutput()">
             <span id ="weight1Value">20%</span>
         </div>
-
+        <hr>
         <div>
             <label for="text2">Input 2:</label>
             <input type="text" id="text2" oninput="updateOutput()">
+            <br>
             <label for="input2">Value 2 (-10 to 10):</label>
-            <input type="range" id="input2" min="-10" max="10" value="0" oninput="updateOutput()">
+            <input type="range" id="input2" min="-10" max="10" value="0" class="valueRange" oninput="updateOutput()">
             <span id ="range2Value">0</span>
-            <input type="range" id="weight2" class="weightRange" min="0" max="100" value="20"">
+            <br>
+            <label for="weight2">Weight 2:</label>
+            <input type="range" id="weight2" class="weightRange" min="0" max="100" value="20">
             <span id ="weight2Value">20%</span>
         </div>
-
+        <hr>
         <div>
             <label for="text3">Input 3:</label>
             <input type="text" id="text3" oninput="updateOutput()">
+            <br>
             <label for="input3">Value 3 (-10 to 10):</label>
-            <input type="range" id="input3" min="-10" max="10" value="0" oninput="updateOutput()">
+            <input type="range" id="input3" min="-10" max="10" value="0" class="valueRange" oninput="updateOutput()">
             <span id ="range3Value">0</span>
+            <br>
+            <label for="weight3">Weight 3:</label>
             <input type="range" id="weight3" class="weightRange" min="0" max="100" value="20">
             <span id ="weight3Value">20%</span>
         </div>
-
+        <hr>
         <div>
             <label for="text4">Input 4:</label>
             <input type="text" id="text4" oninput="updateOutput()">
+            <br>
             <label for="input4">Value 4 (-10 to 10):</label>
-            <input type="range" id="input4" min="-10" max="10" value="0" oninput="updateOutput()">
+            <input type="range" id="input4" min="-10" max="10" value="0" class="valueRange" oninput="updateOutput()">
             <span id ="range4Value">0</span>
+            <br>
+            <label for="weight4">Weight 4:</label>
             <input type="range" id="weight4" class="weightRange" min="0" max="100" value="20">
             <span id ="weight4Value">20%</span>
         </div>
-
+        <hr>
         <div>
             <label for="text5">Input 5:</label>
             <input type="text" id="text5" oninput="updateOutput()">
+            <br>
             <label for="input5">Value 5 (-10 to 10):</label>
             <input type="range" id="input5" min="-10" max="10" value="0" oninput="updateOutput()">
             <span id ="range5Value">0</span>
+            <br>
+            <label for="weigh5">Weight 5:</label>
             <input type="range" id="weight5" class="weightRange" min="0" max="100" value="20">
             <span id ="weight5Value">20%</span>
         </div>
     </div>
 
     <div class="outputContainer">
+        <br>
+        <br>
         <div class="outputBox" id="output1"></div>
         <div class="outputBox" id="output2"></div>
         <div class="outputBox" id="output3"></div>
